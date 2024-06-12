@@ -2,7 +2,8 @@
 
 Here is my setup to create slide decks with
 [pandoc](https://pandoc.org/chunkedhtml-demo/10-slide-shows.html) and
-[reveal.js](https://revealjs.com/).
+[reveal.js](https://revealjs.com/). See also my [blog
+post](https://yohan.beugin.org/posts/2024_06_slides_setup.html) about it.
 
 ## How it works
 
