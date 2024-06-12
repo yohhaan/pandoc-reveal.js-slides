@@ -1,0 +1,47 @@
+/**
+ * Inspired from white theme file for reveal.js 
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #333333;
+$headingColor: #C5050C;
+$linkColor: #0479A8;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( #C5050C, 25% );
+//Custom colors
+$borderColor: #9B0000;
+
+//back to overriding theme settings
+$mainFontSize: 40px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+
+$heading1Size: 2em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.1em;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+@import "../template/slides";

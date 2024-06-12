@@ -1,0 +1,21 @@
+[submodule "dependencies/font-awesome"]
+	path = dependencies/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "dependencies/mathjax-src"]
+	path = dependencies/mathjax-src
+	url = https://github.com/mathjax/MathJax-src.git
+[submodule "dependencies/elapsed-time-bar"]
+	path = dependencies/elapsed-time-bar
+	url = https://github.com/tkrkt/reveal.js-elapsed-time-bar.git
+[submodule "dependencies/pdfexport"]
+	path = dependencies/pdfexport
+	url = https://github.com/McShelby/reveal-pdfexport.git
+[submodule "dependencies/reveal.js"]
+	path = dependencies/reveal.js
+	url = https://github.com/hakimel/reveal.js.git
+[submodule "dependencies/menu"]
+	path = dependencies/menu
+	url = https://github.com/denehyg/reveal.js-menu.git
+[submodule "dependencies/revealjs-plugins"]
+	path = dependencies/revealjs-plugins
+	url = https://github.com/rajgoel/reveal.js-plugins.git

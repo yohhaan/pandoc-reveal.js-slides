@@ -1,0 +1,148 @@
+/* Figures */
+.reveal section figure img {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.reveal section figure figcaption {
+    display: block;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 75%;
+}
+
+//code caption
+.reveal div.sourceCode::after{
+    content: "" attr(data-caption) "";
+    display: block;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 75%;
+  }
+
+.reveal section img {
+    margin: 15px 0px;
+    // background: rgba(255, 255, 255, 0.12);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: none;
+    box-shadow: none;
+}
+
+.reveal section img.plain {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal a img {
+    transition: all .15s linear;
+}
+
+.reveal section div.column{
+    vertical-align: middle;
+}
+
+.reveal a:hover img {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: $linkColor;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/* Front slide */
+.reveal h1.title {
+    color: $headingColor;
+}
+
+.reveal p {
+    margin: 0px 0;
+    line-height: 1.3;
+}
+
+.reveal p.author {
+    float: center;
+    text-transform: capitalize;
+    font-variant-caps: small-caps;
+    line-height: 1.3;
+    // font-weight: bold;
+    text-align: center
+}
+
+.reveal p.institute {
+    float: center;
+    text-align: center;
+    line-height: 1.3;
+
+}
+
+.reveal p.date {
+    float: center;
+    // color: $headingColor;
+    text-align: center;
+    line-height: 1.3;
+    // font-weight: bold;
+}
+
+.reveal div.logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reveal img.logo{
+    background: none;
+    box-shadow: none;
+    margin: 15px;
+    top:100px;
+    position: relative;
+}
+
+.reveal section {
+    text-align: center;
+}
+
+/* Headers */
+
+.reveal h1 {
+    border-bottom: 0px solid $borderColor;
+    border-top: 0px solid $borderColor;
+    margin: 300px 0px 10px 0px;
+}
+
+.reveal h2 {
+    border-bottom: 4px solid $borderColor;
+}
+
+/* Blocks for Theorem/Definition - Proposition, etc. */
+.reveal .block {
+    display: block;
+    text-align: left;
+    font-style: normal;
+    border-left-style: solid;
+    border-left-color: $borderColor;
+    padding-left: 5px;
+    border-left-width: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.reveal .block[name]:before {
+    content: ""attr(name)"";
+    display: inline-block;
+    font-weight: bold;
+    color: $headingColor;
+    font-style: normal;
+}
+
+.reveal ul,
+.reveal dl,
+.reveal ol,
+.reveal p {
+    text-align: left;
+    display: block
+}
+
+@media print {
+    .reveal .slide-menu-button {
+        display: none !important;
+    }
+  }
