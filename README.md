@@ -15,15 +15,21 @@ presenter mode and notes taking) or export it to PDF.
 You can edit the template and theme used by pandoc and reveal.js to make the
 slides look like you want (see files under [`theme/`](theme/)). You can also
 import reveal.js plugins to enable other features. Git submodules are used to
-track and manage all of these depedencies properly, and a [`Makefile`](Makefile)
-is used to automate everything. 
+track and manage all of these dependencies properly, and a
+[`Makefile`](Makefile) is used to automate everything.
 
-You will also find a
-[`Dockerfile`](.devcontainer/Dockerfile) under `.devcontainer/`, see
-[here](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9) for
+## To try out
+
+- You will find a [`Dockerfile`](.devcontainer/Dockerfile) under `.devcontainer/`,
+see [here](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9) for
 direct integration with VS code or for manual deployment instructions.
 
-# Shortcuts for HTML presentation
+- `make dependencies && make build`
+
+- Open the HTML presentation [`html/demo.html`](html/demo.html)
+
+
+## Shortcuts for HTML presentation
 
 - 'B': activate whiteboard
 - 'C': activate canvas
@@ -35,4 +41,4 @@ direct integration with VS code or for manual deployment instructions.
 - 'Esc': slides view
 - 'Ctrl + click': zoom-in/out on slide
 
-Note: the list of shortcuts is also in the side menu on the slides
+Note: the list of shortcuts is also in the side menu
