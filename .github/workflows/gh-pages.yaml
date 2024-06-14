@@ -17,7 +17,7 @@ jobs:
           submodules: true  # Fetch any Git submodules (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
       - name: Build docker image
-        run: docker build -t pandoc-revealjs-local < .devcontainer/Dockerfile
+        run: docker build -t pandoc-revealjs-local .devcontainer/
       - name: Build
         run: docker run -it -v $PWD:/workspace -w/workspace pandoc-revealjs-local make dependencies && make build
       - name: Deploy
