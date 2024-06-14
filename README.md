@@ -19,7 +19,11 @@ import reveal.js plugins to enable other features. Git submodules are used to
 track and manage all of these dependencies properly, and a
 [`Makefile`](Makefile) is used to automate everything.
 
-## To try out
+## Demo
+
+See the demo at https://yohhaan.github.io/pandoc-reveal.js-slides/demo.html
+
+## To build it locally
 
 - You will find a [`Dockerfile`](.devcontainer/Dockerfile) under `.devcontainer/`,
 see [here](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9) for

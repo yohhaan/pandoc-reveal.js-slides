@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main  # Set a branch name to trigger deployment
+    paths:
+      - slides/**
   pull_request:
 jobs:
   deploy:
