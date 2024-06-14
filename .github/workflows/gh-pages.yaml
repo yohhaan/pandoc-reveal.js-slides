@@ -19,7 +19,7 @@ jobs:
       - name: Build docker image
         run: docker build -t pandoc-revealjs-local .devcontainer/
       - name: Build
-        run: docker run --rm -v ${PWD}:/workspace -w /workspace pandoc-revealjs-local /bin/bash -c "make dependencies && make build"
+        run: docker run --user root --rm -v ${PWD}:/workspace -w /workspace pandoc-revealjs-local /bin/bash -c "make dependencies && make build"
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         # If you’re changing the branch from main,
