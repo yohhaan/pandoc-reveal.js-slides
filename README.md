@@ -25,6 +25,11 @@ See the demo at https://yohhaan.github.io/pandoc-reveal.js-slides/demo.html
 
 ## To build it locally
 
+- Clone this repository and its corresponding submodules:
+   - `git clone --recurse-submodules git@github.com:yohhaan/pandoc-reveal.js-slides.git` (SSH)
+   - `git clone --recurse-submodules
+     https://github.com/yohhaan/pandoc-reveal.js-slides.git` (HTTPS)
+
 - You will find a [`Dockerfile`](.devcontainer/Dockerfile) under `.devcontainer/`,
 see [here](https://gist.github.com/yohhaan/b492e165b77a84d9f8299038d21ae2c9) for
 direct integration with VS code or for manual deployment instructions.
