@@ -116,6 +116,10 @@ $body$
   <script src="$revealjs-url$/plugin/chalkboard/plugin.js"></script>
   <script src="$revealjs-url$/plugin/fullscreen/plugin.js"></script>
   <script src="$revealjs-url$/plugin/pdfexport/pdfexport.js"></script>
+  <!-- Appearance Animations -->
+  <script src="$revealjs-url$/plugin/appearance/appearance.js"></script>
+  <!-- Onetimer -->
+  <script src="$revealjs-url$/plugin/onetimer.js"></script>
 
 $if(mathjax)$
   <script src="$revealjs-url$/plugin/math/math.js"></script>
@@ -339,6 +343,14 @@ $if(mathjax)$
           },
         },
 $endif$
+        //Apperance auto-animations
+        appearance: {
+          autoappear: false,
+          autoelements: {
+            'ul li': 'animate__fadeInLeft',
+            'ol li': 'animate__fadeInRight'
+          }
+        },
         // reveal.js plugins
         plugins: [
 $if(mathjax)$
@@ -353,6 +365,8 @@ $endif$
           RevealMenu,
           RevealFullscreen,
           PdfExport,
+          Appearance,
+          OneTimer,
         ],
         // customcontrols: {
         //     controls: [

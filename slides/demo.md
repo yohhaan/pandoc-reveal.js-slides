@@ -9,11 +9,15 @@ slideNumber: true
 width: 1600
 height: 900
 transition: fade
+transitionSpeed: fast
 theme: uw-madison
 logo:
-    - {src: ./assets/logo/cdis.png, style: height:150px;}
-    - {src: ./assets/logo/madsnp.svg, style: height:105px;}
+    - {src: ./assets/logo/cdis.svg, style: height:110px;}
+    - {src: ./assets/logo/madsnp.svg, style: height:77px;}
 logoheader: ./assets/logo/uw-crest.svg
+title-slide-attributes:
+    data-background-image: ./assets/background/uw.svg
+    data-background-size: contain
 ---
 
 ## Slide 1
@@ -32,7 +36,12 @@ Description block demo
 <br />
 
 Term
-: Definition
+: Definition [1]
+
+::: cite
+[1] *Cite Title - Authors - Venue*
+:::
+
 
 ::: notes
 Here you can write notes visible only in the speaker mode
@@ -42,7 +51,7 @@ Here you can write notes visible only in the speaker mode
 ## Columns Layout
 
 ::: columns
-:::: {.column width=70%}
+:::: {.column width=70% .text-align-center}
 ~~~~~~~ {.json caption="JSON Logs"}
 {
     "origin": "",
@@ -50,7 +59,7 @@ Here you can write notes visible only in the speaker mode
 }
 ~~~~~~~
 ::::
-:::: {.column width=30%}
+:::: {.column width=30% .text-align-center}
 #### Latex Equation
 $\int_{a}^{b} x^2 \,dx$
 ::::
@@ -64,10 +73,10 @@ Here you can write notes visible only in the speaker mode
 ## Table & Media
 
 ::: columns
-:::: {.column width=70%}
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | -------- | -------- | -------- |
-| <i class="fa-brands fa-github"></i> | | <i class="fa-regular fa-file-pdf"></i>| |
+:::: {.column width=70% .text-align-center}
+| Column 1                            | Column 2 | Column 3                               | Column 4 |
+| ----------------------------------- | -------- | -------------------------------------- | -------- |
+| <i class="fa-brands fa-github"></i> |          | <i class="fa-regular fa-file-pdf"></i> |          |
 
 ::::
 :::: {.column width=30%}
@@ -79,17 +88,14 @@ Here you can write notes visible only in the speaker mode
 :::
 
 ::: columns
-:::: {.column width=50%}
+:::: {.column width=70% .text-align-center}
 
-![Centered with Caption](./assets/logo/uw-crest.svg){width=20%}
+![Caption](./assets/logo/uw-crest.svg){width=10%}
 
 ::::
-:::: {.column width=50%}
+:::: {.column width=30% .text-align-center}
 
-<!-- Centered without caption -->
-<p style="text-align:center;">
-![](./assets/logo/uw-crest.svg){width=20%}
-</p>
+![](./assets/logo/uw-crest.svg){width=25%}
 
 ::::
 :::
@@ -100,37 +106,37 @@ Here you can write notes visible only in the speaker mode
 <!------------------------>
 
 <!------------------------>
-# Additional Slides
+# Additional Slides {data-visibility="uncounted" data-background-image="./assets/background/uw.svg" data-background-size="contain"}
 <!------------------------>
 
 <!------------------------>
 
-# Vertical Slides A
+# Vertical Slides A {data-visibility="uncounted"}
 <!------------------------>
 
-## Vertical A.1
+## Vertical A.1 {data-visibility="uncounted"}
 
 Slide A.1
 
 <!------------------------>
 
-## Vertical A.2
+## Vertical A.2 {data-visibility="uncounted"}
 
 Slide A.2
 
 <!------------------------>
 
-# Vertical Slides B
+# Vertical Slides B {data-visibility="uncounted"}
 <!------------------------>
 
-## Vertical B.1
+## Vertical B.1 {data-visibility="uncounted"}
 
 Slide B.1
 
 <!------------------------>
 
-## Vertical B.2
+## Vertical B.2 {data-visibility="uncounted"}
 
 Slide B.2
 
-<!------------------------>cd w
+<!------------------------>

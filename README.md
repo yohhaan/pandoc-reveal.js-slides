@@ -46,9 +46,10 @@ direct integration with VS code or for manual deployment instructions.
 - 'D': download annotations
 - 'E': export as PDF file
 - 'F': full screen
+- 'G': go to slide #
 - 'M': menu
 - 'S': speaker view
-- 'Esc': slides view
+- 'Esc or O': slides view
 - 'Ctrl + click': zoom-in/out on slide
 
 Note: the list of shortcuts is also in the side menu

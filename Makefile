@@ -10,6 +10,8 @@ vpath %.html html
 dependencies: cleandependencies
 	mkdir -p dependencies/public/
 	cp -R dependencies/reveal.js dependencies/public
+	cp -R dependencies/appearance/plugin/appearance dependencies/public/reveal.js/plugin
+	cp -R dependencies/onetimer/onetimer.js dependencies/public/reveal.js/plugin/onetimer.js
 	cp -R dependencies/elapsed-time-bar/plugin/elapsed-time-bar dependencies/public/reveal.js/plugin
 	cp -R dependencies/menu dependencies/public/reveal.js/plugin
 	cp -R dependencies/pdfexport dependencies/public/reveal.js/plugin

@@ -19,3 +19,9 @@
 [submodule "dependencies/revealjs-plugins"]
 	path = dependencies/revealjs-plugins
 	url = https://github.com/rajgoel/reveal.js-plugins.git
+[submodule "dependencies/onetimer"]
+	path = dependencies/onetimer
+	url = https://github.com/tpoindex/reveal-onetimer.git
+[submodule "dependencies/appearance"]
+	path = dependencies/appearance
+	url = https://github.com/Martinomagnifico/reveal.js-appearance.git
