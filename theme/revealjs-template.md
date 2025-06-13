@@ -126,6 +126,52 @@ $if(mathjax)$
 $endif$
 
   <script>
+    window.revealMenuHandler = function (handler) {
+      return function (event) {
+        event.preventDefault();
+        handler();
+        Reveal.getPlugin("menu").closeMenu();
+      };
+    };
+
+    window.RevealMenuHandlers = {
+      fullscreen: revealMenuHandler(function () {
+        const element = document.documentElement;
+        const requestMethod =
+          element.requestFullscreen ||
+          element.webkitRequestFullscreen ||
+          element.webkitRequestFullScreen ||
+          element.mozRequestFullScreen ||
+          element.msRequestFullscreen;
+        if (requestMethod) {
+          requestMethod.apply(element);
+        }
+      }),
+      speakerMode: revealMenuHandler(function () {
+        Reveal.getPlugin("notes").open();
+      }),
+      keyboardHelp: revealMenuHandler(function () {
+        Reveal.toggleHelp(true);
+      }),
+      overview: revealMenuHandler(function () {
+        Reveal.toggleOverview(true);
+      }),
+      toggleChalkboard: revealMenuHandler(function () {
+        RevealChalkboard.toggleChalkboard();
+      }),
+      toggleNotesCanvas: revealMenuHandler(function () {
+        RevealChalkboard.toggleNotesCanvas();
+      }),
+      downloadDrawings: revealMenuHandler(function () {
+        RevealChalkboard.download();
+      }),
+      togglePdfExport: revealMenuHandler(function () {
+        PdfExport.togglePdfExport();
+      }),
+    };
+  </script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -368,22 +414,22 @@ $endif$
           Appearance,
           OneTimer,
         ],
-        // customcontrols: {
-        //     controls: [
-        //     { icon: '<i class="fa fa-pen-square"></i>',
-        //         title: 'Toggle chalkboard (B)',
-        //         action: 'RevealChalkboard.toggleChalkboard();'
-        //     },
-        //     { icon: '<i class="fa fa-pen"></i>',
-        //         title: 'Toggle notes canvas (C)',
-        //         action: 'RevealChalkboard.toggleNotesCanvas();'
-        //     },
-        //     { icon: '<i class="fa fa-download"></i>',
-        //         title: 'Download annotations (D)',
-        //         action: 'RevealChalkboard.download();'
-        //     }
-        //     ]
-        // },
+        customcontrols: {
+            controls: [
+            { icon: '<i class="fa-solid fa-note-sticky"></i>',
+                title: 'Toggle chalkboard (W)',
+                action: 'RevealChalkboard.toggleChalkboard();'
+            },
+            { icon: '<i class="fa fa-pen"></i>',
+                title: 'Toggle notes canvas (C)',
+                action: 'RevealChalkboard.toggleNotesCanvas();'
+            },
+            // { icon: '<i class="fa fa-download"></i>',
+            //     title: 'Download annotations (D)',
+            //     action: 'RevealChalkboard.download();'
+            // },
+            ]
+        },
         chalkboard: {
           boardmarkerWidth: 3,
           chalkWidth: 7,
@@ -393,7 +439,7 @@ $endif$
           readOnly: undefined,
           transition: 800,
           theme: "whiteboard",
-          background: [ 'rgba(127,127,127,.1)' , path + 'img/whiteboard.png' ],
+          background: [ 'rgba(255, 255, 255, 0.1)' , path + 'img/whiteboard.png' ],
           grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
           eraser: { src: path + 'img/sponge.png', radius: 20},
           boardmarkers : [
@@ -452,7 +498,7 @@ $endif$
     custom: [
       { icon: '<i class="fa-regular fa-keyboard"></i>',
         title: 'Shortcuts',
-        content: '<ul><li>B: activate whiteboard</li><li>C: activate canvas</li><li>D: download annotations</li><li>E: export as PDF file</li><li>F: full screen</li><li>M: menu</li><li>S: speaker view</li><li>Esc: slides view</li><li>Ctrl + click: zoom-in/out on slide</li></ul>',
+        content: '<ul class="slide-menu-items"><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.fullscreen(event)">f: Fullscreen</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.speakerMode(event)">s: Speaker View</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.overview(event)">o: Slide Overview</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.togglePdfExport(event)">e: PDF Export Mode</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.toggleChalkboard(event)">b: Toggle Chalkboard</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.toggleNotesCanvas(event)">c: Toggle Notes Canvas</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.downloadDrawings(event)">d: Download Drawings</a></li><li class="slide-menu-item"><a href="#" onclick="RevealMenuHandlers.keyboardHelp(event)">?: Keyboard Help</a></li><li class="slide-menu-item">Ctrl + click: zoom-in/out on slide</li></ul>',
       }
     ],
 
