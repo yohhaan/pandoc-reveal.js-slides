@@ -4,7 +4,7 @@ subtitle: "Subtitle"
 author: <b>Author 1</b>, Author 2, ...
 institute: Institution
 date: Month Day, Year
-duration: 5 #amount of time in minutes for presentation
+duration: 10 #amount of time in minutes for presentation
 slideNumber: true
 width: 1600
 height: 900
