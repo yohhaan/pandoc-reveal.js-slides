@@ -5,6 +5,7 @@ on:
       - main  # Set a branch name to trigger deployment
     paths:
       - slides/**
+      - theme/**
   pull_request:
 jobs:
   deploy:
