@@ -417,17 +417,17 @@ $endif$
         customcontrols: {
             controls: [
             { icon: '<i class="fa-solid fa-note-sticky"></i>',
-                title: 'Toggle chalkboard (W)',
+                title: 'Toggle chalkboard (w)',
                 action: 'RevealChalkboard.toggleChalkboard();'
             },
             { icon: '<i class="fa fa-pen"></i>',
-                title: 'Toggle notes canvas (C)',
+                title: 'Toggle notes canvas (c)',
                 action: 'RevealChalkboard.toggleNotesCanvas();'
             },
-            // { icon: '<i class="fa fa-download"></i>',
-            //     title: 'Download annotations (D)',
-            //     action: 'RevealChalkboard.download();'
-            // },
+            { icon: '<i class="fa fa-expand"></i>',
+                title: 'Full screen (f)',
+                action: 'Reveal.triggerKey(70);'
+            },
             ]
         },
         chalkboard: {
